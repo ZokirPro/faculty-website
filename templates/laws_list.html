@@ -1,0 +1,69 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% block body %}
+    <!-- Content -->
+    <div class="page-content bg-white">
+        <!-- inner page banner -->
+        <div class="page-banner ovbl-dark" style="background-image:url(/static/images/banner/banner2.jpg);">
+            <div class="container">
+                <div class="page-banner-entry">
+                    <h1 class="text-white pt-5 mt-5">{{title}}</h1>
+				 </div>
+            </div>
+        </div>
+		<!-- Breadcrumb row -->
+		<div class="breadcrumb-row">
+			<div class="container">
+				<ul class="list-inline">
+					<li><a href={% url 'index' %}>{% trans "Asosiy" %}</a></li>
+					{% for breadcrumb in breadcrumbs  %}
+                        <li>{{breadcrumb}}</li>
+                    {% endfor %}
+				</ul>
+			</div>
+		</div>
+		<!--   <!-- inner page banner END -->
+            
+            <div class="content-block">
+                <!-- About Us -->
+                <div class="section-area section-sp2">
+                    <div class='container' style="display:flex;flex-wrap:wrap">
+                            {% for law  in page_obj %}
+                            <div class="col-4 mt-4">
+                                <div class="recent-news">
+                                    <div class="action-box">
+                                        <img style='height:200px;' src={{law.image.url}} alt="">
+                                    </div>
+                                    
+                                    <div class="info-bx">
+                                        <ul class="media-post">
+                                            <li><a id='index_news_date' href="#"><i class="fa fa-calendar"></i>{{law.createdDate|date:'d/m/Y h:m'}}</a></li>
+                                        
+                                        </ul>
+                                        <h6 title='{{law.title}}' class="post-title" style='font-size:15px;line-height:21px'><a href="#" style='line-height:0.4,font-size:small !important'>{{law.title | truncatechars:40}}</a></h5>
+                                        <p title='{{law.short_description}}' style='height:57px;line-height:1.43;overflow:hidden;text-overflow:ellipsis;line-clamp:4'>{{law.short_description | truncatechars:120}}</p>
+                                        <div class="post-extra">
+                                            <a href={{law.file.url}} class="btn-link"><i class='fa fa-download mr-1'></i>{% trans "Yuklab olish" %}</a>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            {% empty %}
+                                {% trans "Hech qanday malumot mavjud emas" %}
+                            {% endfor %}
+                            
+                            <div class="col-12 mt-4">{% include 'pagination.html' %}</div>
+                    </div>
+                    
+                    </div>
+                        
+                 
+                
+                </div>
+            
+        <!-- Our Status END ==== -->
+      
+    </div>
+    <!-- Content END-->
+	{% endblock body %}

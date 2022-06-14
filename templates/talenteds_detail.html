@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% block body %}
+    <!-- Content -->
+    <div class="page-content bg-white">
+        <!-- inner page banner -->
+        <div class="page-banner ovbl-dark" style="background-image:url({{data.img.url}});">
+            <div class="container">
+                <div class="page-banner-entry">
+                    <h1 class="text-white pt-5 mt-5">{{title}}</h1>
+				 </div>
+            </div>
+        </div>
+		<!-- Breadcrumb row -->
+		<div class="breadcrumb-row">
+			<div class="container">
+				<ul class="list-inline">
+					<li><a href={% url 'index' %}>{% trans "Asosiy" %}</a></li>
+					{% for breadcrumb in breadcrumbs  %}
+                        <li>{{breadcrumb}}</li>
+                    {% endfor %}
+				</ul>
+			</div>
+		</div>
+		<!--   <!-- inner page banner END -->
+            
+            <div class="content-block">
+                <!-- About Us -->
+                <div class="section-area section-sp2">
+                    <div class="container">
+                        <img style="" src={{data.img.url}} /><br/><br/>
+                        {{data.desc | safe}}
+                </div>
+                
+            </div>
+            
+        <!-- Our Status END ==== -->
+      
+    </div>
+    <!-- Content END-->
+	{% endblock body %}

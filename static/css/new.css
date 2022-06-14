@@ -1,0 +1,38 @@
+.akt_container{
+    height: 100vh;
+    
+}
+.word-break{
+    word-wrap: break-word;
+}
+
+.gallery_image_container{
+    height: 300px !important;
+    width: 300px !important;
+    border: 2px solid lavender;
+    border-style: dashed;
+    border-radius: 15px;
+}
+
+.gallery_image{
+    object-fit: cover !important; 
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+}
+
+@media screen and (max-width:300px) {
+    .carousel_title{
+        font-size: 13px !important;
+        margin-top: 50px;
+    }
+    .carousel_desc{
+        margin-top: 60px;
+    }
+}
+
+@media screen and (max-width:500px) and (min-width:300px) {
+    .carousel_title{
+        font-size: 17px !important;
+    }
+}

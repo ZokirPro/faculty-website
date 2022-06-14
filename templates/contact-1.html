@@ -1,0 +1,99 @@
+	{% extends 'base.html' %}
+	{% load i18n %}
+	{% block body %}
+    <!-- Content -->
+    <div class="page-content bg-white">
+        <!-- inner page banner -->
+        <div class="page-banner ovbl-dark" style="background-image:url(assets/images/banner/banner3.jpg);">
+            <div class="container">
+                <div class="page-banner-entry">
+                    <h1 class="text-white pt-5">{% trans "Aloqa" %}</h1>
+				 </div>
+            </div>
+        </div>
+		<!-- Breadcrumb row -->
+		<div class="breadcrumb-row">
+			<div class="container">
+				<ul class="list-inline">
+					<li><a href={% url 'index' %}>{% trans "Asosiy" %}</a></li>
+					<li>{% trans "Aloqa" %}</li>
+				</ul>
+			</div>
+		</div>
+		<!-- Breadcrumb row END -->
+	
+        <!-- inner page banner -->
+        <div class="page-banner contact-page section-sp2">
+            <div class="container">
+                <div class="row">
+					<div class="col-lg-5 col-md-5 m-b30">
+						<div class="bg-primary text-white contact-info-bx">
+							<h2 class="m-b10 title-head">{% trans "Bog'lanish uchun" %}</h2>
+							<div class="widget widget_getintuch">	
+								<ul>
+									<li><i class="ti-location-pin"></i><a class="text-white" href={{MainInfos.map_url}}>{{MainInfos.address}}</a></li>
+									<li><i class="ti-mobile" ></i><a class="text-white" href="tel:{{MainInfos.phone}}">{{MainInfos.phone}}</a></li>
+									<li><i class="ti-email"></i><a class="text-white" href="email:{{MainInfos.email}}">{{MainInfos.email}}</a></li>
+								</ul>
+							</div>
+							<h5 class="m-t0 m-b20">{% trans "Bizni ijtimoiy tarmoqlarda kuzatib boring" %}</h5>
+							<ul class="list-inline contact-social-bx">
+								{% if  MainInfos.telegram %}<li ><a class="btn outline radius-xl" href={{MainInfos.telegram}} class="btn-link"><i class="fa fa-telegram"></i></a></li>{% endif %}
+                                {% if MainInfos.facebook %}<li><a class="btn outline radius-xl" href={{MainInfos.facebook}} class="btn-link"><i class="fa fa-facebook"></i></a></li>{% endif %}
+                                {% if MainInfos.instagram %} <li><a class="btn outline radius-xl" href={{MainInfos.instagram}} class="btn-link"><i class="fa fa-instagram"></i></a></li>{% endif %}
+							</ul>
+						</div>
+					</div>
+					<div class="col-lg-7 col-md-7">
+						<form method='POST' class="contact-bx ">
+							{% csrf_token %}
+						<div class=""></div>
+							<div class="heading-bx left">
+								<h2 class="title-head">{% trans "Biz bilan bog'lanish" %} <span></span></h2>
+							</div>
+							<div class="row placeani">
+								<div class="col-lg-6">
+									<div class="form-group">
+										<div class="input-group">
+											<label>{% trans "Ismingiz" %}</label>
+											<input name="name" type="text" required class="form-control ">
+										</div>
+									</div>
+								</div>
+								<div class="col-lg-6">
+									<div class="form-group">
+										<div class="input-group">
+											<label>{% trans "Telefon raqam" %}</label>
+											<input name="phone"   data-mask='+998-00-000-00-00'  type="number" required class="form-control  contact_phone">
+										</div>
+									</div>
+								</div>
+								<script>
+									$(document).ready(function(){
+										$('.contact_phone').mask('+998-00-000-00-00')
+									}
+									
+								</script>
+								
+								
+								<div class="col-lg-12">
+									<div class="form-group">
+										<div class="input-group">
+											<label>{% trans "Matn" %}</label>
+											<textarea name="message" rows="4" class="form-control" required ></textarea>
+										</div>
+									</div>
+								</div>
+								<div class="col-lg-12">
+									<button name="submit" type="submit" value="Submit" class="btn button-md"> {% trans "Jo'natish" %}</button>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+            </div>
+		</div>
+        <!-- inner page banner END -->
+    </div>
+    <!-- Content END-->
+   {% endblock body %}

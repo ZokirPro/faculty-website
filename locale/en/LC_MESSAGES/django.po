@@ -1,0 +1,208 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-05-21 23:09+0500\n"
+"PO-Revision-Date: 2022-05-21 23:15+0500\n"
+"Last-Translator:   <>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Translated-Using: django-rosetta 0.9.8\n"
+
+#: index/views.py:22
+msgid "Bosh sahifa"
+msgstr "Home"
+
+#: index/views.py:41 templates/base.html:134 templates/base.html:254
+msgid "Qabul kunlari"
+msgstr "Reception days"
+
+#: index/views.py:49
+msgid "Tanlov yangiliklari"
+msgstr "Competition news"
+
+#: index/views.py:63 templates/base.html:122
+msgid "Talim yangiliklari"
+msgstr "Education news"
+
+#: index/views.py:79
+msgid "Xodimlari"
+msgstr "Staff"
+
+#: index/views.py:87 templates/base.html:145 templates/base.html:217
+#: templates/news_detail.html:10
+msgid "Biz haqimizda"
+msgstr "About Us"
+
+#: index/views.py:100 templates/base.html:118
+#: templates/news_competition.html:19
+msgid "Yangiliklar"
+msgstr "News"
+
+#: index/views.py:110
+msgid "Yulduzlar"
+msgstr "The stars"
+
+#: templates/about.html:18 templates/contact-1.html:18
+#: templates/e-resources.html:18 templates/employees.html:18
+#: templates/laws_detail.html:18 templates/laws_list.html:18
+#: templates/membership.html:18 templates/news_competition.html:18
+#: templates/news_detail.html:18 templates/one_page.html:18
+#: templates/talenteds_detail.html:18 templates/talenteds_list.html:18
+#: templates/videoLessons.html:18
+msgid "Asosiy"
+msgstr "Main"
+
+#: templates/akt.html:13
+msgid "Onlayn maktab"
+msgstr "Online school"
+
+#: templates/akt.html:16
+msgid "Video dars"
+msgstr "Video lesson"
+
+#: templates/base.html:123
+msgid "Tanlov"
+msgstr "Selection"
+
+#: templates/base.html:128 templates/base.html:250 templates/contact-1.html:10
+#: templates/contact-1.html:19
+msgid "Aloqa"
+msgstr "Contact"
+
+#: templates/base.html:133 templates/base.html:253
+msgid "Biz bilan aloqa"
+msgstr "Contact us"
+
+#: templates/base.html:140
+msgid "Bo'lim haqida"
+msgstr "About the section"
+
+#: templates/base.html:144 templates/base.html:216
+msgid "Rahbariyat"
+msgstr "The staff"
+
+#: templates/base.html:150 templates/base.html:224 templates/base.html:237
+msgid "Elektron resurslar"
+msgstr "Electronic resources"
+
+#: templates/base.html:154 templates/base.html:226
+msgid "Qonunlar"
+msgstr "Laws"
+
+#: templates/base.html:161
+msgid "Talabalar"
+msgstr "Students"
+
+#: templates/base.html:165 templates/base.html:227
+msgid "Fakultet taniqli bitiruvchi va o'quvchilar"
+msgstr "Well-known alumni and students of the faculty"
+
+#: templates/base.html:214
+msgid "Bo'limlar haqida"
+msgstr "About sections"
+
+#: templates/base.html:239 templates/index.html:130
+msgid "Talim yangiliklar"
+msgstr "Education news"
+
+#: templates/base.html:240 templates/index.html:170
+msgid "Tanlovlar"
+msgstr "Contests"
+
+#: templates/contact-1.html:31
+msgid "Bog'lanish uchun"
+msgstr "To connect"
+
+#: templates/contact-1.html:39
+msgid "Bizni ijtimoiy tarmoqlarda kuzatib boring"
+msgstr "Follow us on social media"
+
+#: templates/contact-1.html:52
+msgid "Biz bilan bog'lanish"
+msgstr "Contact us"
+
+#: templates/contact-1.html:58
+msgid "Ismingiz"
+msgstr "Your name"
+
+#: templates/contact-1.html:66
+msgid "Telefon raqam"
+msgstr "Phone number"
+
+#: templates/contact-1.html:82
+msgid "Matn"
+msgstr "Text"
+
+#: templates/contact-1.html:88
+msgid "Jo'natish"
+msgstr "Send"
+
+#: templates/e-resources.html:48
+msgid "Yuklab Olish"
+msgstr "Download"
+
+#: templates/e-resources.html:54 templates/laws_list.html:52
+#: templates/news_competition.html:53 templates/talenteds_list.html:48
+#: templates/videoLessons.html:52
+msgid "Hech qanday malumot mavjud emas"
+msgstr "No data available"
+
+#: templates/employees.html:45 templates/membership.html:54
+msgid "Hech qanday malumot yo'q"
+msgstr "There is no data"
+
+#: templates/index.html:150 templates/index.html:190 templates/index.html:274
+#: templates/news_competition.html:47 templates/talenteds_list.html:42
+msgid "To'liq o'qish"
+msgstr "Read full"
+
+#: templates/index.html:210
+msgid "Meyoriy hujjatlar"
+msgstr "Normative documents"
+
+#: templates/index.html:230 templates/laws_list.html:46
+msgid "Yuklab olish"
+msgstr "Download"
+
+#: templates/index.html:241
+msgid "Hammasini ko'rish"
+msgstr "See them all"
+
+#: templates/index.html:256
+msgid "Fakultetni talantli yulduzlari"
+msgstr "Talented stars of the faculty"
+
+#: templates/membership.html:10
+msgid ""
+"Jismoniy shaxslar va yuridik shaxslar va ularning vakillarining qabul qilish"
+" kunlari"
+msgstr ""
+"Days of reception of individuals and legal entities and their "
+"representatives"
+
+#: templates/membership.html:35
+msgid "F.I.O"
+msgstr "Fullname"
+
+#: templates/membership.html:36
+msgid "Qabul qilish kuni va vaqti"
+msgstr "Date and time of reception"
+
+#: templates/membership.html:37
+msgid "Qabul o'tkazadigan joy"
+msgstr "Reception area"
+
+#: templates/videoLessons.html:45
+msgid "sinf"
+msgstr "class"

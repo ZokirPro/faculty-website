@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% block body %}
+    <!-- Content -->
+    <div class="page-content bg-white">
+        <!-- inner page banner -->
+        <div class="page-banner ovbl-dark" style="background-image:url(/static/images/banner/banner2.jpg);">
+            <div class="container">
+                <div class="page-banner-entry">
+                    <h1 class="text-white pt-5 mt-5">{{title}}</h1>
+				 </div>
+            </div>
+        </div>
+		<!-- Breadcrumb row -->
+		<div class="breadcrumb-row">
+			<div class="container">
+				<ul class="list-inline">
+					<li><a href={% url 'index' %}>{% trans "Asosiy" %}</a></li>
+					{% for breadcrumb in breadcrumbs  %}
+                        <li>{{breadcrumb}}</li>
+                    {% endfor %}
+				</ul>
+			</div>
+		</div>
+		<!--   <!-- inner page banner END -->
+            
+            <div class="content-block">
+                <!-- About Us -->
+                <div class="section-area p-4">
+                    <div class="container">
+                        <a id="index_news_date" class='pb-3' href="#"><i class="fa fa-calendar"></i>{{data.createdDate}}</a><br/>
+                        <a id="index_news_date" class='pb-3' href={{data.file.url}}><i class="fa fa-download mr-2"></i>{{data.title}}</a>
+                        {% comment %} {{data.full_desc | safe}} {% endcomment %}
+                        
+                </div>
+                
+            </div>
+            
+        <!-- Our Status END ==== -->
+      
+    </div>
+    <!-- Content END-->
+	{% endblock body %}

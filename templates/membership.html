@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% block body %}
+    <!-- Content -->
+    <div class="page-content bg-white">
+        <!-- inner page banner -->
+        <div class="page-banner ovbl-dark" style="background-image:url(/static/images/banner/banner2.jpg);">
+            <div class="container">
+                <div class="page-banner-entry">
+                    <h1 class="text-white pt-5 mt-5">{% trans "Jismoniy shaxslar va yuridik shaxslar va ularning vakillarining qabul qilish kunlari" %}</h1>
+				 </div>
+            </div>
+        </div>
+		<!-- Breadcrumb row -->
+		<div class="breadcrumb-row">
+			<div class="container">
+				<ul class="list-inline">
+					<li><a href={% url 'index' %}>{% trans "Asosiy" %}</a></li>
+					<li>Qabul</li>
+				</ul>
+			</div>
+		</div>
+		<!--   <!-- inner page banner END -->
+		<div class="content-block">
+            <!-- About Us -->
+			<div class="section-area section-sp2">
+                <div class="container">
+					<div class="row">
+						{% if people %}
+						<div class="col-md-12 heading-bx text-center">
+							<table class="table table-bordered">
+								<thead>
+								  <tr>
+									<th>№</th>
+									<th>{% trans "F.I.O" %}</th>
+									<th>{% trans "Qabul qilish kuni va vaqti" %}</th>
+									<th>{% trans "Qabul o'tkazadigan joy" %}</th>
+								  </tr>
+								</thead>
+								<tbody>
+								  {% for person in people %}
+								  <tr>
+									<td>{{forloop.counter}}</td>
+									<td title='{{person.employee.name}}' >{{person.employee.name}}<br/><span title='{{person.employee.position}}' style='fonw-weight:light;font-size:small'>{{person.employee.position}}</span></td>
+									<td>{{person.day}}  {{person.startTime}} - {{person.endTime}}</td>
+									<td title='{{person.room}}'>{{person.room}}</td>
+								  </tr>
+								  {% endfor %}
+								 
+								</tbody>
+							  </table>
+						</div>
+						{% else %}
+							{% trans "Hech qanday malumot yo'q" %}
+						{% endif %}
+					</div>
+					
+				</div>
+            </div>
+            
+		</div>
+			<!-- Our Status END ==== -->
+      
+    </div>
+    <!-- Content END-->
+	{% endblock body %}

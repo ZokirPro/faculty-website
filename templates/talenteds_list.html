@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% block body %}
+    <!-- Content -->
+    <div class="page-content bg-white">
+        <!-- inner page banner -->
+        <div class="page-banner ovbl-dark" style="background-image:url(/static/images/banner/banner2.jpg);">
+            <div class="container">
+                <div class="page-banner-entry">
+                    <h1 class="text-white pt-5 mt-5">{{title}}</h1>
+				 </div>
+            </div>
+        </div>
+		<!-- Breadcrumb row -->
+		<div class="breadcrumb-row">
+			<div class="container">
+				<ul class="list-inline">
+					<li><a href={% url 'index' %}>{% trans "Asosiy" %}</a></li>
+					{% for breadcrumb in breadcrumbs  %}
+                        <li>{{breadcrumb}}</li>
+                    {% endfor %}
+				</ul>
+			</div>
+		</div>
+		<!--   <!-- inner page banner END -->
+            
+            <div class="content-block">
+                <!-- About Us -->
+                <div class="section-area section-sp2">
+                    <div class='container' style="display:flex; flex-wrap:wrap;">
+                            {% for one  in page_obj %}
+                            <div class="item col-md-4 mt-4">
+                                <div class="recent-news">
+                                    <div class="action-box">
+                                        <img style='height:250px;object-fit:contain' src={{one.img.url}} alt="">
+                                    </div>
+                                    
+                                    <div class="info-bx">
+                
+                                        <h6 title='{{one.fullname}}' class="post-title" style='font-size:15px;line-height:21px'><a href={% url 'talenteds_detail' one.id %} style='line-height:0.4,font-size:small !important'>{{one.fullname | truncatechars:40}}</a></h5>
+                                        <div class="post-extra justify-content-end align-items-center">
+                                            <a href={% url 'talenteds_detail' one.id  %} class="btn-link">{% trans "To'liq o'qish" %}</a>
+                                            <i class="fa fa-arrow-right text-dark ml-1" style="height:20px"> </i>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            {% empty %}
+                                {% trans "Hech qanday malumot mavjud emas" %}
+                            {% endfor %}
+
+                            <div class="col-12">
+                                {% include 'pagination.html' %}
+                            </div>
+                        </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            
+        <!-- Our Status END ==== -->
+      
+    </div>
+    <!-- Content END-->
+	{% endblock body %}
